@@ -10,7 +10,7 @@ public class UserManagement extends ZBankBaseService {
 
 	public UserManagement() {
 		super();
-		baseRequestSpecification.basePath(BASE_PATH).log().all();
+		baseRequestSpecification.basePath(BASE_PATH);
 	}
 
 	public Response fetchUserProfile(String authToken) {

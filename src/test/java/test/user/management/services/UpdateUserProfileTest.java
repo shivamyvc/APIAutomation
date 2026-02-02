@@ -2,6 +2,7 @@ package test.user.management.services;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
@@ -11,6 +12,7 @@ import models.response.profile.RespProfile;
 import services.AuthServices;
 import services.UserManagement;
 
+@Listeners({test.utility.listeners.Listener.class})
 public class UpdateUserProfileTest {
 
 	protected String userToken = "";
@@ -83,7 +85,7 @@ public class UpdateUserProfileTest {
 				.email("janesjohnny75@gmail.com").build();
 
 		Response resp = user.updateProfile(userModel, userToken);
-		resp.prettyPrint();
+//		resp.prettyPrint();
 		RespProfile updatedProfile = resp.as(RespProfile.class);
 
 		Assert.assertEquals(resp.getStatusCode(), 500, "Profile Replace Put Rquest Failed");
