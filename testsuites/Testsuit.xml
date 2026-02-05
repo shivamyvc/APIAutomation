@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <test name="LoginTests">
+        <classes>
+            <class name="test.user.management.services.GetUserProfileTest" />
+            <class name="test.user.management.services.UpdateUserProfileTest" />
+        </classes>
+    </test>
+</suite>
