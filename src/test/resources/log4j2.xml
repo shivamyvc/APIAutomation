@@ -1,26 +1,22 @@
 <Configuration status="WARN">
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
-
-			<PatternLayout
-				pattern="%d{HH:mm:ss} %-5level - %msg%n">
+			<PatternLayout 
+			pattern="[%d{dd MMM YYYYHH:mm:ss}] [%t] %-5level - %msg%n">
 			</PatternLayout>
 		</Console>
 
-
-		<File name="File" fileName="logs/test.logs">
+		<File name="File" fileName="logs/test.logs" append="false">
+		<ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"></ThresholdFilter>
 			<PatternLayout
-				pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n">
+				pattern="[%d{dd MMM YYYYHH:mm:ss}] [%t] %-5level - %msg%n">
 			</PatternLayout>
 
 		</File>
-
-
 	</Appenders>
 
 	<Loggers>
 		<Root level="info">
-
 			<AppenderRef ref="Console" />
 			<AppenderRef ref="File" />
 

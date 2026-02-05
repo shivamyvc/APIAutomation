@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import base.test.BaseTest;
 import io.restassured.response.Response;
 import models.profile.ReqUserProfile;
 import models.request.auth.ReqLogin;
@@ -12,8 +13,8 @@ import models.response.profile.RespProfile;
 import services.AuthServices;
 import services.UserManagement;
 
-@Listeners({test.utility.listeners.Listener.class})
-public class UpdateUserProfileTest {
+
+public class UpdateUserProfileTest  extends BaseTest{
 
 	protected String userToken = "";
 	protected UserManagement user;
