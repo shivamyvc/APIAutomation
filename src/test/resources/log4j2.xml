@@ -1,13 +1,19 @@
 <Configuration status="WARN">
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout 
-			pattern="[%d{dd MMM YYYYHH:mm:ss}] [%t] %-5level - %msg%n">
+			<PatternLayout
+				pattern="[%d{dd MMM YYYYHH:mm:ss}] [%t] %-5level - %msg%n">
+
+				<replace regex="(&quot;password&quot;:&quot;)[^&quot;]+"
+					replacement="$1****" />
 			</PatternLayout>
+
+
 		</Console>
 
 		<File name="File" fileName="logs/test.logs" append="false">
-		<ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"></ThresholdFilter>
+			<ThresholdFilter level="DEBUG" onMatch="ACCEPT"
+				onMismatch="DENY"></ThresholdFilter>
 			<PatternLayout
 				pattern="[%d{dd MMM YYYYHH:mm:ss}] [%t] %-5level - %msg%n">
 			</PatternLayout>

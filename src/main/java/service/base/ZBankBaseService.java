@@ -11,7 +11,7 @@ import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-@Listeners({utilities.Listeners.Listener.class})
+
 public class ZBankBaseService {
 
 	protected final static String BASE_URL = "https://swift.techwithjatin.com/";

@@ -1,74 +1,11 @@
-[06 Feb 202600:50:10] [main] INFO  - Test Started : getUserDetails
-[06 Feb 202600:50:10] [main] INFO  - Request: {"username":"shivammavii","password":"Learn@2000"}
-[06 Feb 202600:50:10] [main] INFO  - Response: {
-    "id": 3950,
-    "username": "shivammavii",
-    "email": "janesjohnny75@gmail.com",
-    "firstName": "Shivam",
-    "lastName": "Yadav1",
-    "mobileNumber": "0099887766"
-}
-[06 Feb 202600:50:10] [main] INFO  - Test Started : invalidAUthTokenUserDetails
-[06 Feb 202600:50:10] [main] INFO  - Response: {
-    "id": 3950,
-    "username": "shivammavii",
-    "email": "janesjohnny75@gmail.com",
-    "firstName": "Shivam",
-    "lastName": "Yadav1",
-    "mobileNumber": "0099887766"
-}
-[06 Feb 202600:50:10] [main] ERROR - Test Failed: invalidAUthTokenUserDetails
-[06 Feb 202600:50:10] [main] INFO  - Test Started : userProfileUpdateTest
-[06 Feb 202600:50:10] [main] INFO  - Request: {"username":"shivammavii","password":"Learn@2000"}
-[06 Feb 202600:50:10] [main] INFO  - Response: {
-    "id": 3950,
-    "username": "shivammavii",
-    "password": "$2a$10$B4gqwodlNzbZnJb1odB.AetgFnHmzi07GHQrKnHHylJzmOsLFaWoi",
-    "email": "janesjohnny75@gmail.com",
-    "firstName": "Shivam",
-    "lastName": "Yadav1",
-    "mobileNumber": "0099887766",
-    "roles": [
-        "ROLE_USER"
-    ],
-    "active": true,
-    "createdAt": "2026-01-23T16:12:41.661824",
-    "updatedAt": "2026-02-02T19:09:46.710966",
-    "address": "address1",
-    "fullName": "Shivam Yadav1"
-}
-[06 Feb 202600:50:10] [main] INFO  - Test Started : userProfileInvalidUpdateTest
-[06 Feb 202600:50:10] [main] INFO  - Request: {"firstName":null,"lastName":"Yadav1","email":null,"mobileNumber":null,"address":"address1"}
-[06 Feb 202600:50:10] [main] INFO  - Response: {
-    "timestamp": "2026-02-05 19:20:10",
-    "status": 500,
-    "error": "System Error",
-    "message": "An unexpected error occurred",
-    "path": "uri=/api/users/profile",
-    "solution": "Please try again later or contact support",
-    "errorCode": "SYS_001"
-}
-[06 Feb 202600:50:10] [main] ERROR - Test Failed: userProfileInvalidUpdateTest
-[06 Feb 202600:50:10] [main] INFO  - Test Started : userProfileReplaceTest
-[06 Feb 202600:50:10] [main] INFO  - Request: {"firstName":null,"lastName":"*&*&*","email":null,"mobileNumber":"++__))((","address":"address1"}
-[06 Feb 202600:50:10] [main] INFO  - Response: {
-    "timestamp": "2026-02-05 19:20:11",
-    "status": 500,
-    "error": "System Error",
-    "message": "An unexpected error occurred",
-    "path": "uri=/api/users/profile",
-    "solution": "Please try again later or contact support",
-    "errorCode": "SYS_001"
-}
-[06 Feb 202600:50:10] [main] ERROR - Test Failed: userProfileReplaceTest
-[06 Feb 202600:50:10] [main] INFO  - Test Started : userProfileInvalidReplaceTest
-[06 Feb 202600:50:10] [main] INFO  - Request: {"firstName":"Shivam","lastName":"Mavii","email":"janesjohnny75@gmail.com","mobileNumber":"0099887766","address":null}
-[06 Feb 202600:50:11] [main] INFO  - Response: {
-    "timestamp": "2026-02-05 19:20:11",
-    "status": 500,
-    "error": "System Error",
-    "message": "An unexpected error occurred",
-    "path": "uri=/api/users/profile",
-    "solution": "Please try again later or contact support",
-    "errorCode": "SYS_001"
+[07 Feb 202600:40:34] [main] INFO  - Test Started : createSavingAccount
+[07 Feb 202600:40:34] [main] INFO  - Request: {"accountType":"SAVINGS","branch":"MAIN_BRANCH"}
+[07 Feb 202600:40:34] [main] INFO  - Response: {
+    "accountNumber": "0405033646",
+    "accountType": "SAVINGS",
+    "balance": 0,
+    "status": "ACTIVE",
+    "branch": "MAIN_BRANCH",
+    "createdAt": "2026-02-06T19:10:33.646815616",
+    "ownerName": "Shivam Yadav1"
 }

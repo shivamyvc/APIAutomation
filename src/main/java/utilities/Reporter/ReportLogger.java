@@ -25,6 +25,14 @@ public class ReportLogger {
 		//Extent Report Integration here
 	}
 	
+	
+	public static void  fail(Throwable t) {
+		LOGGER.error(t);
+		ExtentTestManager.getTest().fail(t);
+		
+		//Extent Report Integration here
+	}
+	
 	public static void  pass(String Message) {
 		LOGGER.debug(Message);
 		ExtentTestManager.getTest().pass(Message);

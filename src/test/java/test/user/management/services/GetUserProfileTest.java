@@ -14,12 +14,9 @@ import models.request.auth.ReqLogin;
 import models.response.profile.RespProfile;
 import services.AuthServices;
 import services.UserManagement;
-import utilities.Reporter.ExtentTestManager;
-import utilities.Reporter.ReportLogger;
 
 
-
-public class GetUserProfileTest  extends BaseTest{
+public class GetUserProfileTest extends BaseTest {
 
 	protected String userToken = "";
 	protected UserManagement user;
@@ -34,10 +31,8 @@ public class GetUserProfileTest  extends BaseTest{
 		user = new UserManagement();
 
 	}
-	
 
-
-	@Test(testName = "GetUserProfileTest", description = "Fetch user profile with valid auth token", priority = 1)
+	@Test(testName = "GetUserProfileTest", description = "Fetch user profile with valid auth token", priority = 1,enabled = true)
 	void getUserDetails() {
 
 		Response response = user.fetchUserProfile(userToken);
@@ -54,15 +49,13 @@ public class GetUserProfileTest  extends BaseTest{
 		Assert.assertEquals(respProfileModel.getMobileNumber(), "0099887766", "user profile mobileNumber mismatch");
 
 	}
-	
-	
-	@Test(testName = "Invalid auth token", description = "Fetch user profile with invalid auth token", priority = 2,enabled=true)
+
+	@Test(testName = "Invalid auth token", description = "Fetch user profile with invalid auth token", priority = 2, enabled = true)
 	void invalidAUthTokenUserDetails() {
 
 		Response response = user.fetchUserProfile(userToken);
 		Assert.assertEquals(response.getStatusCode(), 401, "Get Profile HTTP code invalid");
 //		RespProfile respProfileModel = response.as(RespProfile.class);
-
 
 	}
 

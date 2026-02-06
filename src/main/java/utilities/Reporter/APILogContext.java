@@ -16,7 +16,7 @@ public class APILogContext {
 			return requestSpec.get();
 	}
 
-	public static void setRespons(Response resp) {
+	public static void setResponse(Response resp) {
 		response.set(resp);
 	}
 		

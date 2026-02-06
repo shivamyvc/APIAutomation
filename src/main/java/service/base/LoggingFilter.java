@@ -16,7 +16,7 @@ public class LoggingFilter implements Filter {
 		// TODO Auto-generated method stub
 		APILogContext.setRequest(requestSpec);
 		Response response= ctx.next(requestSpec, responseSpec);
-		APILogContext.setRespons(response);
+		APILogContext.setResponse(response);
 		return response;
 	}
 

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 6, 2026 11:42:29 pm</span></a>
+<a href="#"><span class="badge badge-primary">Feb 7, 2026 12:40:34 am</span></a>
 </li>
 </ul>
 </div>
@@ -67,7 +67,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -80,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">getUserDetails</p>
+            <p class="name">createSavingAccount</p>
             <p class="text-sm">
-              <span>11:42:32 pm</span> / <span>00:00:00:603</span>
+              <span>12:40:34 am</span> / <span>00:00:00:556</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,16 +89,16 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">getUserDetails</h5>
-<span class='badge badge-success'>02.06.2026 11:42:32 pm</span>
-<span class='badge badge-danger'>02.06.2026 11:42:33 pm</span>
-<span class='badge badge-default'>00:00:00:603</span>
+<h5 class="test-status text-pass">createSavingAccount</h5>
+<span class='badge badge-success'>02.07.2026 12:40:34 am</span>
+<span class='badge badge-danger'>02.07.2026 12:40:34 am</span>
+<span class='badge badge-default'>00:00:00:556</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-10 m-l-5">Fetch user profile with valid auth token</div>
+<div class="m-t-10 m-l-5"></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -107,26 +106,26 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:42:33 pm</td>
+        <td>12:40:34 am</td>
         <td>
-          Test Started : getUserDetails
+          Test Started : createSavingAccount
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:42:33 pm</td>
+        <td>12:40:34 am</td>
         <td>
-          <b>POST Request On : https://swift.techwithjatin.com/api/auth/login</b>
+          <b>POST Request On : https://swift.techwithjatin.com/api/accounts</b>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:42:33 pm</td>
+        <td>12:40:34 am</td>
         <td>
            <div class='json-tree' id='code-block-json-0'></div>
  <script>
   function jsonTreeCreate0() { 
-   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({"username":"shivammavii","password":"Learn@2000"}); 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({"accountType":"SAVINGS","branch":"MAIN_BRANCH"}); 
   }
   jsonTreeCreate0();
  </script>
@@ -135,25 +134,26 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:42:33 pm</td>
+        <td>12:40:34 am</td>
         <td>
           Response: 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:42:33 pm</td>
+        <td>12:40:34 am</td>
         <td>
            <div class='json-tree' id='code-block-json-1'></div>
  <script>
   function jsonTreeCreate1() { 
    document.getElementById('code-block-json-1').innerHTML = JSONTree.create({
-    "id": 3950,
-    "username": "shivammavii",
-    "email": "janesjohnny75@gmail.com",
-    "firstName": "Shivam",
-    "lastName": "Yadav1",
-    "mobileNumber": "0099887766"
+    "accountNumber": "0405033646",
+    "accountType": "SAVINGS",
+    "balance": 0,
+    "status": "ACTIVE",
+    "branch": "MAIN_BRANCH",
+    "createdAt": "2026-02-06T19:10:33.646815616",
+    "ownerName": "Shivam Yadav1"
 }); 
   }
   jsonTreeCreate1();
@@ -163,101 +163,9 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:42:33 pm</td>
+        <td>12:40:34 am</td>
         <td>
-          Test Passed: getUserDetails
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">invalidAUthTokenUserDetails</p>
-            <p class="text-sm">
-              <span>11:42:33 pm</span> / <span>00:00:00:130</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">invalidAUthTokenUserDetails</h5>
-<span class='badge badge-success'>02.06.2026 11:42:33 pm</span>
-<span class='badge badge-danger'>02.06.2026 11:42:33 pm</span>
-<span class='badge badge-default'>00:00:00:130</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Fetch user profile with invalid auth token</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:42:33 pm</td>
-        <td>
-          Test Started : invalidAUthTokenUserDetails
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:42:33 pm</td>
-        <td>
-          <b>GET Request On : https://swift.techwithjatin.com/api/users/profile</b>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:42:33 pm</td>
-        <td>
-          Response: 
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:42:33 pm</td>
-        <td>
-           <div class='json-tree' id='code-block-json-2'></div>
- <script>
-  function jsonTreeCreate2() { 
-   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({
-    "timestamp": "2026-02-06 18:12:32",
-    "status": 500,
-    "error": "System Error",
-    "message": "An unexpected error occurred",
-    "path": "uri=/api/users/profile",
-    "solution": "Please try again later or contact support",
-    "errorCode": "SYS_001"
-}); 
-  }
-  jsonTreeCreate2();
- </script>
-
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:42:33 pm</td>
-        <td>
-          Get Profile HTTP code invalid expected [401] but found [500]
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:42:33 pm</td>
-        <td>
-          Test Failed: invalidAUthTokenUserDetails
+          Test Passed: createSavingAccount
         </td>
       </tr>
   </tbody>
@@ -279,13 +187,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 6, 2026 11:42:29 pm</h3>
+<h3>Feb 7, 2026 12:40:34 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 6, 2026 11:42:33 pm</h3>
+<h3>Feb 7, 2026 12:40:34 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -297,7 +205,7 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -313,12 +221,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
+<div><small data-tooltip='100%'>
 <b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>1</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -336,10 +244,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='41%'><b>5</b> events passed</small></div>
+<div><small data-tooltip='50%'><b>3</b> events passed</small></div>
 <div>
-<small data-tooltip='16%'><b>2</b> events failed,
-<b data-tooltip='%'>5</b> others
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>3</b> others
 </small>
 </div>
 </div>
@@ -355,7 +263,7 @@
 </div></div>
 <script>
 var timeline = {
-"getUserDetails":0.603,"invalidAUthTokenUserDetails":0.13
+"createSavingAccount":0.556
 };
 </script>
 <div class="row">
@@ -365,7 +273,7 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 1,
-failParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -381,11 +289,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 5,
-failEvents: 2,
+passEvents: 3,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 5
+infoEvents: 3
 };
 </script>        </div>
       </div>
