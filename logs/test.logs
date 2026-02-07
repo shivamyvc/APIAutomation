@@ -1,11 +1,71 @@
-[07 Feb 202600:40:34] [main] INFO  - Test Started : createSavingAccount
-[07 Feb 202600:40:34] [main] INFO  - Request: {"accountType":"SAVINGS","branch":"MAIN_BRANCH"}
-[07 Feb 202600:40:34] [main] INFO  - Response: {
-    "accountNumber": "0405033646",
+[08 Feb 202600:34:28] [main] INFO  - Test Started : createAccWithInvalidAccType
+[08 Feb 202600:34:29] [main] INFO  - Request: {"accountType":"ABCEDF","branch":"MAIN_BRANCH"}
+[08 Feb 202600:34:29] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:04:27",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:34:29] [main] INFO  - Test Started : createAccWithInvalidBranch
+[08 Feb 202600:34:29] [main] INFO  - Request: {"accountType":"ABCEDF","branch":"XYZZ"}
+[08 Feb 202600:34:29] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:04:28",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:34:29] [main] INFO  - Test Started : getAllAccDetailsTest
+[08 Feb 202600:34:30] [main] INFO  - Response: [
+    {
+        "accountNumber": "0401766304",
+        "accountType": "CURRENT",
+        "balance": 101.00,
+        "status": "ACTIVE",
+        "branch": "MAIN_BRANCH",
+        "createdAt": "2026-02-06T18:16:06.304824",
+        "ownerName": "Shivam Yadav1"
+    },
+    {
+        "accountNumber": "0402088216",
+        "accountType": "SAVINGS",
+        "balance": 0.00,
+        "status": "ACTIVE",
+        "branch": "MAIN_BRANCH",
+        "createdAt": "2026-02-06T18:21:28.216025",
+        "ownerName": "Shivam Yadav1"
+    },
+    {
+        "accountNumber": "0405033646",
+        "accountType": "SAVINGS",
+        "balance": 0.00,
+        "status": "ACTIVE",
+        "branch": "MAIN_BRANCH",
+        "createdAt": "2026-02-06T19:10:33.646816",
+        "ownerName": "Shivam Yadav1"
+    },
+    {
+        "accountNumber": "0482938154",
+        "accountType": "SAVINGS",
+        "balance": 0.00,
+        "status": "ACTIVE",
+        "branch": "MAIN_BRANCH",
+        "createdAt": "2026-02-07T16:48:58.154069",
+        "ownerName": "Shivam Yadav1"
+    }
+]
+[08 Feb 202600:34:30] [main] INFO  - Test Started : getValidAccDetailsTest
+[08 Feb 202600:34:31] [main] INFO  - Response: {
+    "accountNumber": "0482938154",
     "accountType": "SAVINGS",
-    "balance": 0,
+    "balance": 0.00,
     "status": "ACTIVE",
     "branch": "MAIN_BRANCH",
-    "createdAt": "2026-02-06T19:10:33.646815616",
+    "createdAt": "2026-02-07T16:48:58.154069",
     "ownerName": "Shivam Yadav1"
 }

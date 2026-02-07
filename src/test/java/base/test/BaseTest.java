@@ -26,6 +26,7 @@ public class BaseTest {
 		Response response = authService.login(loginPayload);
 		Assert.assertEquals(response.getStatusCode(), 200, "Login Failed");
 		userToken = response.jsonPath().getString("token");
+		System.out.println("Token:  "+userToken);
 	}
 	
 	public String getToken() {
