@@ -1,4 +1,4 @@
-package test.account.create;
+package test.accounts.services;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

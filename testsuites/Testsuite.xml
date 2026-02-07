@@ -1,9 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="MyTestSuite">
-    <test name="LoginTests">
+<suite name="MyTestSuite1">
+    <test name="Smoke Test">
         <classes>
             <class name="test.user.management.services.GetUserProfileTest" />
             <class name="test.user.management.services.UpdateUserProfileTest" />
+            <class name="test.accounts.services.AccountsTest" />
+            <class name="test.auth.services.LoginTest" />
         </classes>
     </test>
 </suite>

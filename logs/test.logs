@@ -1,7 +1,84 @@
-[08 Feb 202600:34:28] [main] INFO  - Test Started : createAccWithInvalidAccType
-[08 Feb 202600:34:29] [main] INFO  - Request: {"accountType":"ABCEDF","branch":"MAIN_BRANCH"}
-[08 Feb 202600:34:29] [main] INFO  - Response: {
-    "timestamp": "2026-02-07 19:04:27",
+[08 Feb 202600:48:46] [main] INFO  - Test Started : getUserDetails
+[08 Feb 202600:48:47] [main] INFO  - Response: {
+    "id": 3950,
+    "username": "shivammavii",
+    "email": "janesjohnny75@gmail.com",
+    "firstName": "Shivam",
+    "lastName": "Yadav1",
+    "mobileNumber": "0099887766"
+}
+[08 Feb 202600:48:47] [main] INFO  - Test Started : invalidAUthTokenUserDetails
+[08 Feb 202600:48:47] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:46",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:48:47] [main] ERROR - Get Profile HTTP code invalid expected [401] but found [500]
+[08 Feb 202600:48:47] [main] ERROR - Test Failed: invalidAUthTokenUserDetails
+[08 Feb 202600:48:47] [main] INFO  - Test Started : userProfileUpdateTest
+[08 Feb 202600:48:48] [main] INFO  - Request: {"firstName":null,"lastName":"Yadav1","email":null,"mobileNumber":null,"address":"address1"}
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "id": 3950,
+    "username": "shivammavii",
+    "password": "$2a$10$B4gqwodlNzbZnJb1odB.AetgFnHmzi07GHQrKnHHylJzmOsLFaWoi",
+    "email": "janesjohnny75@gmail.com",
+    "firstName": "Shivam",
+    "lastName": "Yadav1",
+    "mobileNumber": "0099887766",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "active": true,
+    "createdAt": "2026-01-23T16:12:41.661824",
+    "updatedAt": "2026-02-02T19:09:46.710966",
+    "address": "address1",
+    "fullName": "Shivam Yadav1"
+}
+[08 Feb 202600:48:48] [main] INFO  - Test Started : userProfileInvalidUpdateTest
+[08 Feb 202600:48:48] [main] INFO  - Request: {"firstName":null,"lastName":"*&*&*","email":null,"mobileNumber":"++__))((","address":"address1"}
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:46",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:48:48] [main] ERROR - LastName Update Success Special character is not allowed expected [Yadav1] but found [null]
+[08 Feb 202600:48:48] [main] ERROR - Test Failed: userProfileInvalidUpdateTest
+[08 Feb 202600:48:48] [main] INFO  - Test Started : userProfileReplaceTest
+[08 Feb 202600:48:48] [main] INFO  - Request: {"firstName":"Shivam","lastName":"Mavii","email":"janesjohnny75@gmail.com","mobileNumber":"0099887766","address":null}
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:46",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:48:48] [main] ERROR - Profile Replace Failed expected [200] but found [500]
+[08 Feb 202600:48:48] [main] ERROR - Test Failed: userProfileReplaceTest
+[08 Feb 202600:48:48] [main] INFO  - Test Started : userProfileInvalidReplaceTest
+[08 Feb 202600:48:48] [main] INFO  - Request: {"firstName":"Shivam","lastName":"Mavii","email":"janesjohnny75@gmail.com","mobileNumber":null,"address":null}
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:48:48] [main] INFO  - Test Started : createAccWithInvalidAccType
+[08 Feb 202600:48:48] [main] INFO  - Request: {"accountType":"ABCEDF","branch":"MAIN_BRANCH"}
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:47",
     "status": 500,
     "error": "System Error",
     "message": "An unexpected error occurred",
@@ -9,10 +86,10 @@
     "solution": "Please try again later or contact support",
     "errorCode": "SYS_001"
 }
-[08 Feb 202600:34:29] [main] INFO  - Test Started : createAccWithInvalidBranch
-[08 Feb 202600:34:29] [main] INFO  - Request: {"accountType":"ABCEDF","branch":"XYZZ"}
-[08 Feb 202600:34:29] [main] INFO  - Response: {
-    "timestamp": "2026-02-07 19:04:28",
+[08 Feb 202600:48:48] [main] INFO  - Test Started : createAccWithInvalidBranch
+[08 Feb 202600:48:48] [main] INFO  - Request: {"accountType":"ABCEDF","branch":"XYZZ"}
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:47",
     "status": 500,
     "error": "System Error",
     "message": "An unexpected error occurred",
@@ -20,52 +97,63 @@
     "solution": "Please try again later or contact support",
     "errorCode": "SYS_001"
 }
-[08 Feb 202600:34:29] [main] INFO  - Test Started : getAllAccDetailsTest
-[08 Feb 202600:34:30] [main] INFO  - Response: [
-    {
-        "accountNumber": "0401766304",
-        "accountType": "CURRENT",
-        "balance": 101.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-06T18:16:06.304824",
-        "ownerName": "Shivam Yadav1"
-    },
-    {
-        "accountNumber": "0402088216",
-        "accountType": "SAVINGS",
-        "balance": 0.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-06T18:21:28.216025",
-        "ownerName": "Shivam Yadav1"
-    },
-    {
-        "accountNumber": "0405033646",
-        "accountType": "SAVINGS",
-        "balance": 0.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-06T19:10:33.646816",
-        "ownerName": "Shivam Yadav1"
-    },
-    {
-        "accountNumber": "0482938154",
-        "accountType": "SAVINGS",
-        "balance": 0.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-07T16:48:58.154069",
-        "ownerName": "Shivam Yadav1"
-    }
-]
-[08 Feb 202600:34:30] [main] INFO  - Test Started : getValidAccDetailsTest
-[08 Feb 202600:34:31] [main] INFO  - Response: {
-    "accountNumber": "0482938154",
-    "accountType": "SAVINGS",
-    "balance": 0.00,
-    "status": "ACTIVE",
-    "branch": "MAIN_BRANCH",
-    "createdAt": "2026-02-07T16:48:58.154069",
-    "ownerName": "Shivam Yadav1"
+[08 Feb 202600:48:48] [main] INFO  - Test Started : getAllAccDetailsTest
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts/user",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
 }
+[08 Feb 202600:48:48] [main] ERROR - error while getting account details status expected [200] but found [500]
+[08 Feb 202600:48:48] [main] ERROR - Test Failed: getAllAccDetailsTest
+[08 Feb 202600:48:48] [main] INFO  - Test Started : getValidAccDetailsTest
+[08 Feb 202600:48:48] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts/0482938154",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:48:48] [main] ERROR - error while getting account details status expected [200] but found [500]
+[08 Feb 202600:48:48] [main] ERROR - Test Failed: getValidAccDetailsTest
+[08 Feb 202600:48:48] [main] INFO  - Test Started : validLoginTest
+[08 Feb 202600:48:49] [main] INFO  - Request: {"username":"shivammavii","password":"Learn@2000"}
+[08 Feb 202600:48:49] [main] INFO  - Response: {
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaGl2YW1tYXZpaSIsImlhdCI6MTc3MDQ5MTkyNywiZXhwIjoxNzcwNDk1NTI3fQ.3aOGj6HKtc0b0pWhaW4HDnb7GvvBmlKlDshU19G8LCI",
+    "type": "Bearer",
+    "id": 3950,
+    "username": "shivammavii",
+    "email": "janesjohnny75@gmail.com",
+    "roles": [
+        "ROLE_USER"
+    ]
+}
+[08 Feb 202600:48:49] [main] INFO  - Test Started : invalidLoginTest
+[08 Feb 202600:48:49] [main] INFO  - Request: {"username":"shivammav","password":"Learn@2000"}
+[08 Feb 202600:48:49] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 401,
+    "error": "Invalid Credentials",
+    "message": "The username or password you entered is incorrect",
+    "path": "uri=/api/auth/login",
+    "solution": "Please check your credentials and try again",
+    "errorCode": "AUTH_002"
+}
+[08 Feb 202600:48:49] [main] INFO  - Test Started : blankLoginTest
+[08 Feb 202600:48:49] [main] INFO  - Request: {"username":"","password":""}
+[08 Feb 202600:48:49] [main] INFO  - Response: {
+    "timestamp": "2026-02-07 19:18:48",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/auth/login",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+[08 Feb 202600:48:49] [main] ERROR - HTTP Status code assertion failed  expected [401] but found [500]
+[08 Feb 202600:48:49] [main] ERROR - Test Failed: blankLoginTest

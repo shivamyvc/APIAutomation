@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 8, 2026 12:34:27 am</span></a>
+<a href="#"><span class="badge badge-primary">Feb 8, 2026 12:48:45 am</span></a>
 </li>
 </ul>
 </div>
@@ -67,6 +67,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">createAccWithInvalidAccType</p>
+            <p class="name">getUserDetails</p>
             <p class="text-sm">
-              <span>12:34:27 am</span> / <span>00:00:01:530</span>
+              <span>12:48:45 am</span> / <span>00:00:01:579</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,16 +90,16 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">createAccWithInvalidAccType</h5>
-<span class='badge badge-success'>02.08.2026 12:34:27 am</span>
-<span class='badge badge-danger'>02.08.2026 12:34:29 am</span>
-<span class='badge badge-default'>00:00:01:530</span>
+<h5 class="test-status text-pass">getUserDetails</h5>
+<span class='badge badge-success'>02.08.2026 12:48:45 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:47 am</span>
+<span class='badge badge-default'>00:00:01:579</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-10 m-l-5">Create Account With Inavlid Account Type</div>
+<div class="m-t-10 m-l-5">Fetch user profile with valid auth token</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -106,26 +107,40 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:28 am</td>
+        <td>12:48:46 am</td>
         <td>
-          Test Started : createAccWithInvalidAccType
+          Test Started : getUserDetails
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:29 am</td>
+        <td>12:48:47 am</td>
         <td>
-          <b>POST Request On : https://swift.techwithjatin.com/api/accounts</b>
+          <b>GET Request On : https://swift.techwithjatin.com/api/users/profile</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:47 am</td>
+        <td>
+          Response: 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:29 am</td>
+        <td>12:48:47 am</td>
         <td>
            <div class='json-tree' id='code-block-json-0'></div>
  <script>
   function jsonTreeCreate0() { 
-   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({"accountType":"ABCEDF","branch":"MAIN_BRANCH"}); 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
+    "id": 3950,
+    "username": "shivammavii",
+    "email": "janesjohnny75@gmail.com",
+    "firstName": "Shivam",
+    "lastName": "Yadav1",
+    "mobileNumber": "0099887766"
+}); 
   }
   jsonTreeCreate0();
  </script>
@@ -134,24 +149,80 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:29 am</td>
+        <td>12:48:47 am</td>
+        <td>
+          Test Passed: getUserDetails
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidAUthTokenUserDetails</p>
+            <p class="text-sm">
+              <span>12:48:47 am</span> / <span>00:00:00:315</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">invalidAUthTokenUserDetails</h5>
+<span class='badge badge-success'>02.08.2026 12:48:47 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:47 am</span>
+<span class='badge badge-default'>00:00:00:315</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Fetch user profile with invalid auth token</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:47 am</td>
+        <td>
+          Test Started : invalidAUthTokenUserDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:47 am</td>
+        <td>
+          <b>GET Request On : https://swift.techwithjatin.com/api/users/profile</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:47 am</td>
         <td>
           Response: 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:29 am</td>
+        <td>12:48:47 am</td>
         <td>
            <div class='json-tree' id='code-block-json-1'></div>
  <script>
   function jsonTreeCreate1() { 
    document.getElementById('code-block-json-1').innerHTML = JSONTree.create({
-    "timestamp": "2026-02-07 19:04:27",
+    "timestamp": "2026-02-07 19:18:46",
     "status": 500,
     "error": "System Error",
     "message": "An unexpected error occurred",
-    "path": "uri=/api/accounts",
+    "path": "uri=/api/users/profile",
     "solution": "Please try again later or contact support",
     "errorCode": "SYS_001"
 }); 
@@ -162,109 +233,17 @@
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:29 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:47 am</td>
         <td>
-          Test Passed: createAccWithInvalidAccType
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">createAccWithInvalidBranch</p>
-            <p class="text-sm">
-              <span>12:34:29 am</span> / <span>00:00:00:552</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">createAccWithInvalidBranch</h5>
-<span class='badge badge-success'>02.08.2026 12:34:29 am</span>
-<span class='badge badge-danger'>02.08.2026 12:34:29 am</span>
-<span class='badge badge-default'>00:00:00:552</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Create Account With Inavlid Branch Name</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:29 am</td>
-        <td>
-          Test Started : createAccWithInvalidBranch
+          Get Profile HTTP code invalid expected [401] but found [500]
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:29 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:47 am</td>
         <td>
-          <b>POST Request On : https://swift.techwithjatin.com/api/accounts</b>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:29 am</td>
-        <td>
-           <div class='json-tree' id='code-block-json-2'></div>
- <script>
-  function jsonTreeCreate2() { 
-   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({"accountType":"ABCEDF","branch":"XYZZ"}); 
-  }
-  jsonTreeCreate2();
- </script>
-
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:29 am</td>
-        <td>
-          Response: 
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:29 am</td>
-        <td>
-           <div class='json-tree' id='code-block-json-3'></div>
- <script>
-  function jsonTreeCreate3() { 
-   document.getElementById('code-block-json-3').innerHTML = JSONTree.create({
-    "timestamp": "2026-02-07 19:04:28",
-    "status": 500,
-    "error": "System Error",
-    "message": "An unexpected error occurred",
-    "path": "uri=/api/accounts",
-    "solution": "Please try again later or contact support",
-    "errorCode": "SYS_001"
-}); 
-  }
-  jsonTreeCreate3();
- </script>
-
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:29 am</td>
-        <td>
-          Test Passed: createAccWithInvalidBranch
+          Test Failed: invalidAUthTokenUserDetails
         </td>
       </tr>
   </tbody>
@@ -277,9 +256,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">getAllAccDetailsTest</p>
+            <p class="name">userProfileUpdateTest</p>
             <p class="text-sm">
-              <span>12:34:29 am</span> / <span>00:00:01:045</span>
+              <span>12:48:47 am</span> / <span>00:00:00:166</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -287,11 +266,627 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">getAllAccDetailsTest</h5>
-<span class='badge badge-success'>02.08.2026 12:34:29 am</span>
-<span class='badge badge-danger'>02.08.2026 12:34:30 am</span>
-<span class='badge badge-default'>00:00:01:045</span>
+<h5 class="test-status text-pass">userProfileUpdateTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:47 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:166</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Updating user with valid data inputs fields</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:47 am</td>
+        <td>
+          Test Started : userProfileUpdateTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          <b>PATCH Request On : https://swift.techwithjatin.com/api/users/profile</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-2'></div>
+ <script>
+  function jsonTreeCreate2() { 
+   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({"firstName":null,"lastName":"Yadav1","email":null,"mobileNumber":null,"address":"address1"}); 
+  }
+  jsonTreeCreate2();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-3'></div>
+ <script>
+  function jsonTreeCreate3() { 
+   document.getElementById('code-block-json-3').innerHTML = JSONTree.create({
+    "id": 3950,
+    "username": "shivammavii",
+    "password": "$2a$10$B4gqwodlNzbZnJb1odB.AetgFnHmzi07GHQrKnHHylJzmOsLFaWoi",
+    "email": "janesjohnny75@gmail.com",
+    "firstName": "Shivam",
+    "lastName": "Yadav1",
+    "mobileNumber": "0099887766",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "active": true,
+    "createdAt": "2026-01-23T16:12:41.661824",
+    "updatedAt": "2026-02-02T19:09:46.710966",
+    "address": "address1",
+    "fullName": "Shivam Yadav1"
+}); 
+  }
+  jsonTreeCreate3();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Passed: userProfileUpdateTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">userProfileInvalidUpdateTest</p>
+            <p class="text-sm">
+              <span>12:48:48 am</span> / <span>00:00:00:136</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">userProfileInvalidUpdateTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:136</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Updating user with invalid data inputs fields</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Started : userProfileInvalidUpdateTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          <b>PATCH Request On : https://swift.techwithjatin.com/api/users/profile</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-4'></div>
+ <script>
+  function jsonTreeCreate4() { 
+   document.getElementById('code-block-json-4').innerHTML = JSONTree.create({"firstName":null,"lastName":"*&*&*","email":null,"mobileNumber":"++__))((","address":"address1"}); 
+  }
+  jsonTreeCreate4();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-5'></div>
+ <script>
+  function jsonTreeCreate5() { 
+   document.getElementById('code-block-json-5').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:46",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}); 
+  }
+  jsonTreeCreate5();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          LastName Update Success Special character is not allowed expected [Yadav1] but found [null]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Failed: userProfileInvalidUpdateTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">userProfileReplaceTest</p>
+            <p class="text-sm">
+              <span>12:48:48 am</span> / <span>00:00:00:114</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">userProfileReplaceTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:114</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Put Request with valid data</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Started : userProfileReplaceTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          <b>PUT Request On : https://swift.techwithjatin.com/api/users/profile</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-6'></div>
+ <script>
+  function jsonTreeCreate6() { 
+   document.getElementById('code-block-json-6').innerHTML = JSONTree.create({"firstName":"Shivam","lastName":"Mavii","email":"janesjohnny75@gmail.com","mobileNumber":"0099887766","address":null}); 
+  }
+  jsonTreeCreate6();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-7'></div>
+ <script>
+  function jsonTreeCreate7() { 
+   document.getElementById('code-block-json-7').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:46",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}); 
+  }
+  jsonTreeCreate7();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Profile Replace Failed expected [200] but found [500]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Failed: userProfileReplaceTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">userProfileInvalidReplaceTest</p>
+            <p class="text-sm">
+              <span>12:48:48 am</span> / <span>00:00:00:125</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">userProfileInvalidReplaceTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:125</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Put Request with valid data</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Started : userProfileInvalidReplaceTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          <b>PUT Request On : https://swift.techwithjatin.com/api/users/profile</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-8'></div>
+ <script>
+  function jsonTreeCreate8() { 
+   document.getElementById('code-block-json-8').innerHTML = JSONTree.create({"firstName":"Shivam","lastName":"Mavii","email":"janesjohnny75@gmail.com","mobileNumber":null,"address":null}); 
+  }
+  jsonTreeCreate8();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-9'></div>
+ <script>
+  function jsonTreeCreate9() { 
+   document.getElementById('code-block-json-9').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}); 
+  }
+  jsonTreeCreate9();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Passed: userProfileInvalidReplaceTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createAccWithInvalidAccType</p>
+            <p class="text-sm">
+              <span>12:48:48 am</span> / <span>00:00:00:115</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createAccWithInvalidAccType</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:115</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Create Account With Inavlid Account Type</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Started : createAccWithInvalidAccType
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          <b>POST Request On : https://swift.techwithjatin.com/api/accounts</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-10'></div>
+ <script>
+  function jsonTreeCreate10() { 
+   document.getElementById('code-block-json-10').innerHTML = JSONTree.create({"accountType":"ABCEDF","branch":"MAIN_BRANCH"}); 
+  }
+  jsonTreeCreate10();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-11'></div>
+ <script>
+  function jsonTreeCreate11() { 
+   document.getElementById('code-block-json-11').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}); 
+  }
+  jsonTreeCreate11();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Passed: createAccWithInvalidAccType
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createAccWithInvalidBranch</p>
+            <p class="text-sm">
+              <span>12:48:48 am</span> / <span>00:00:00:118</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createAccWithInvalidBranch</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:118</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Create Account With Inavlid Branch Name</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Started : createAccWithInvalidBranch
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          <b>POST Request On : https://swift.techwithjatin.com/api/accounts</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-12'></div>
+ <script>
+  function jsonTreeCreate12() { 
+   document.getElementById('code-block-json-12').innerHTML = JSONTree.create({"accountType":"ABCEDF","branch":"XYZZ"}); 
+  }
+  jsonTreeCreate12();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-13'></div>
+ <script>
+  function jsonTreeCreate13() { 
+   document.getElementById('code-block-json-13').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}); 
+  }
+  jsonTreeCreate13();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Passed: createAccWithInvalidBranch
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">getAllAccDetailsTest</p>
+            <p class="text-sm">
+              <span>12:48:48 am</span> / <span>00:00:00:125</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">getAllAccDetailsTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:125</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -304,81 +899,59 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:29 am</td>
+        <td>12:48:48 am</td>
         <td>
           Test Started : getAllAccDetailsTest
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:30 am</td>
+        <td>12:48:48 am</td>
         <td>
           <b>GET Request On : https://swift.techwithjatin.com/api/accounts/user</b>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:30 am</td>
+        <td>12:48:48 am</td>
         <td>
           Response: 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:30 am</td>
+        <td>12:48:48 am</td>
         <td>
-           <div class='json-tree' id='code-block-json-4'></div>
+           <div class='json-tree' id='code-block-json-14'></div>
  <script>
-  function jsonTreeCreate4() { 
-   document.getElementById('code-block-json-4').innerHTML = JSONTree.create([
-    {
-        "accountNumber": "0401766304",
-        "accountType": "CURRENT",
-        "balance": 101.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-06T18:16:06.304824",
-        "ownerName": "Shivam Yadav1"
-    },
-    {
-        "accountNumber": "0402088216",
-        "accountType": "SAVINGS",
-        "balance": 0.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-06T18:21:28.216025",
-        "ownerName": "Shivam Yadav1"
-    },
-    {
-        "accountNumber": "0405033646",
-        "accountType": "SAVINGS",
-        "balance": 0.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-06T19:10:33.646816",
-        "ownerName": "Shivam Yadav1"
-    },
-    {
-        "accountNumber": "0482938154",
-        "accountType": "SAVINGS",
-        "balance": 0.00,
-        "status": "ACTIVE",
-        "branch": "MAIN_BRANCH",
-        "createdAt": "2026-02-07T16:48:58.154069",
-        "ownerName": "Shivam Yadav1"
-    }
-]); 
+  function jsonTreeCreate14() { 
+   document.getElementById('code-block-json-14').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts/user",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}); 
   }
-  jsonTreeCreate4();
+  jsonTreeCreate14();
  </script>
 
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:30 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
         <td>
-          Test Passed: getAllAccDetailsTest
+          error while getting account details status expected [200] but found [500]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Failed: getAllAccDetailsTest
         </td>
       </tr>
   </tbody>
@@ -386,26 +959,26 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="fail" test-id="10"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">getValidAccDetailsTest</p>
             <p class="text-sm">
-              <span>12:34:30 am</span> / <span>00:00:00:257</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>12:48:48 am</span> / <span>00:00:00:140</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">getValidAccDetailsTest</h5>
-<span class='badge badge-success'>02.08.2026 12:34:30 am</span>
-<span class='badge badge-danger'>02.08.2026 12:34:31 am</span>
-<span class='badge badge-default'>00:00:00:257</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<h5 class="test-status text-fail">getValidAccDetailsTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-default'>00:00:00:140</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -418,52 +991,364 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:30 am</td>
+        <td>12:48:48 am</td>
         <td>
           Test Started : getValidAccDetailsTest
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:31 am</td>
+        <td>12:48:48 am</td>
         <td>
           <b>GET Request On : https://swift.techwithjatin.com/api/accounts/0482938154</b>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:31 am</td>
+        <td>12:48:48 am</td>
         <td>
           Response: 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:34:31 am</td>
+        <td>12:48:48 am</td>
         <td>
-           <div class='json-tree' id='code-block-json-5'></div>
+           <div class='json-tree' id='code-block-json-15'></div>
  <script>
-  function jsonTreeCreate5() { 
-   document.getElementById('code-block-json-5').innerHTML = JSONTree.create({
-    "accountNumber": "0482938154",
-    "accountType": "SAVINGS",
-    "balance": 0.00,
-    "status": "ACTIVE",
-    "branch": "MAIN_BRANCH",
-    "createdAt": "2026-02-07T16:48:58.154069",
-    "ownerName": "Shivam Yadav1"
+  function jsonTreeCreate15() { 
+   document.getElementById('code-block-json-15').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/accounts/0482938154",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
 }); 
   }
-  jsonTreeCreate5();
+  jsonTreeCreate15();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          error while getting account details status expected [200] but found [500]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Failed: getValidAccDetailsTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validLoginTest</p>
+            <p class="text-sm">
+              <span>12:48:48 am</span> / <span>00:00:00:217</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validLoginTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:48 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:49 am</span>
+<span class='badge badge-default'>00:00:00:217</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Login With Valid Credentials</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 am</td>
+        <td>
+          Test Started : validLoginTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          <b>POST Request On : https://swift.techwithjatin.com/api/auth/login</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-16'></div>
+ <script>
+  function jsonTreeCreate16() { 
+   document.getElementById('code-block-json-16').innerHTML = JSONTree.create({"username":"shivammavii","password":"Learn@2000"}); 
+  }
+  jsonTreeCreate16();
  </script>
 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:34:31 am</td>
+        <td>12:48:49 am</td>
         <td>
-          Test Passed: getValidAccDetailsTest
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-17'></div>
+ <script>
+  function jsonTreeCreate17() { 
+   document.getElementById('code-block-json-17').innerHTML = JSONTree.create({
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaGl2YW1tYXZpaSIsImlhdCI6MTc3MDQ5MTkyNywiZXhwIjoxNzcwNDk1NTI3fQ.3aOGj6HKtc0b0pWhaW4HDnb7GvvBmlKlDshU19G8LCI",
+    "type": "Bearer",
+    "id": 3950,
+    "username": "shivammavii",
+    "email": "janesjohnny75@gmail.com",
+    "roles": [
+        "ROLE_USER"
+    ]
+}); 
+  }
+  jsonTreeCreate17();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          Test Passed: validLoginTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTest</p>
+            <p class="text-sm">
+              <span>12:48:49 am</span> / <span>00:00:00:191</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:49 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:49 am</span>
+<span class='badge badge-default'>00:00:00:191</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Login With Invalid Credentials</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          Test Started : invalidLoginTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          <b>POST Request On : https://swift.techwithjatin.com/api/auth/login</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-18'></div>
+ <script>
+  function jsonTreeCreate18() { 
+   document.getElementById('code-block-json-18').innerHTML = JSONTree.create({"username":"shivammav","password":"Learn@2000"}); 
+  }
+  jsonTreeCreate18();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-19'></div>
+ <script>
+  function jsonTreeCreate19() { 
+   document.getElementById('code-block-json-19').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:47",
+    "status": 401,
+    "error": "Invalid Credentials",
+    "message": "The username or password you entered is incorrect",
+    "path": "uri=/api/auth/login",
+    "solution": "Please check your credentials and try again",
+    "errorCode": "AUTH_002"
+}); 
+  }
+  jsonTreeCreate19();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          Test Passed: invalidLoginTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">blankLoginTest</p>
+            <p class="text-sm">
+              <span>12:48:49 am</span> / <span>00:00:00:132</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">blankLoginTest</h5>
+<span class='badge badge-success'>02.08.2026 12:48:49 am</span>
+<span class='badge badge-danger'>02.08.2026 12:48:49 am</span>
+<span class='badge badge-default'>00:00:00:132</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Login With empty/blank credentials</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          Test Started : blankLoginTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          <b>POST Request On : https://swift.techwithjatin.com/api/auth/login</b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-20'></div>
+ <script>
+  function jsonTreeCreate20() { 
+   document.getElementById('code-block-json-20').innerHTML = JSONTree.create({"username":"","password":""}); 
+  }
+  jsonTreeCreate20();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          Response: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:49 am</td>
+        <td>
+           <div class='json-tree' id='code-block-json-21'></div>
+ <script>
+  function jsonTreeCreate21() { 
+   document.getElementById('code-block-json-21').innerHTML = JSONTree.create({
+    "timestamp": "2026-02-07 19:18:48",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/auth/login",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}); 
+  }
+  jsonTreeCreate21();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          HTTP Status code assertion failed  expected [401] but found [500]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:49 am</td>
+        <td>
+          Test Failed: blankLoginTest
         </td>
       </tr>
   </tbody>
@@ -485,25 +1370,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 8, 2026 12:34:27 am</h3>
+<h3>Feb 8, 2026 12:48:45 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 8, 2026 12:34:31 am</h3>
+<h3>Feb 8, 2026 12:48:49 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>4</h3>
+<h3>7</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>6</h3>
 </div></div>
 </div>
 </div>
@@ -519,12 +1404,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>4</b> tests passed
+<div><small data-tooltip='53%'>
+<b>7</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='46%'><b>6</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -542,10 +1427,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='54%'><b>12</b> events passed</small></div>
+<div><small data-tooltip='41%'><b>33</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>10</b> others
+<small data-tooltip='15%'><b>12</b> events failed,
+<b data-tooltip='%'>35</b> others
 </small>
 </div>
 </div>
@@ -561,7 +1446,7 @@
 </div></div>
 <script>
 var timeline = {
-"createAccWithInvalidAccType":1.53,"createAccWithInvalidBranch":0.552,"getAllAccDetailsTest":1.045,"getValidAccDetailsTest":0.257
+"getUserDetails":1.579,"invalidAUthTokenUserDetails":0.315,"userProfileUpdateTest":0.166,"userProfileInvalidUpdateTest":0.136,"userProfileReplaceTest":0.114,"userProfileInvalidReplaceTest":0.125,"createAccWithInvalidAccType":0.115,"createAccWithInvalidBranch":0.118,"getAllAccDetailsTest":0.125,"getValidAccDetailsTest":0.14,"validLoginTest":0.217,"invalidLoginTest":0.191,"blankLoginTest":0.132
 };
 </script>
 <div class="row">
@@ -570,8 +1455,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 4,
-failParent: 0,
+passParent: 7,
+failParent: 6,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -587,11 +1472,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 12,
-failEvents: 0,
+passEvents: 33,
+failEvents: 12,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 10
+infoEvents: 35
 };
 </script>        </div>
       </div>
