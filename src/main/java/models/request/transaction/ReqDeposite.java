@@ -52,7 +52,7 @@ public class ReqDeposite {
 			return this;
 		}
 
-		public Builder accountNumber(int amount) {
+		public Builder amount(int amount) {
 			this.amount = amount;
 			return this;
 		}
