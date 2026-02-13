@@ -41,9 +41,14 @@ public void createUserTest(UserRequest user) {
         .when().post("/users")
         .then().statusCode(201).spec(responseSpec);
 }
-Reports
-ExtentReports generated at target/extent.html – interactive dashboard with trends and logs.
 
-Contributing
+
+text
+
+## Example Usage
+***Reports***
+ExtentReports generated at ExtentReport/_report.html
+
+```Contributing
 Fork, PR with test cases. Add features like Allure reports or Karate integration!
 
