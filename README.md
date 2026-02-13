@@ -1,53 +1,19 @@
-# API Automation Framework
+API Automation Framework
+Introduction
+This is a lightweight, Java-based REST API automation framework using Rest Assured, TestNG, and ExtentReports. It streamlines API testing with modular POJOs (Builder pattern), reusable suites, and interactive reports for CI/CD pipelines.
 
-A robust, modular Java-based framework for REST API testing using Rest Assured, TestNG, and ExtentReports. Designed for scalable, data-driven automation with clean architecture.
+Key Features
+POJO Classes with Builder Pattern: Immutable models like UserPOJO using Lombok @Builder for fluent payload creation and validation.
 
-## Key Features
+TestNG Test Cases & Suites: Data-driven tests with XML suites for parallel execution and parameterization.
 
-- **POJO Classes with Builder Pattern**: Immutable request/response models (e.g., UserPOJO) using Lombok's `@Builder` for fluent, type-safe payload construction and validation. [web:11]
-- **TestNG Test Cases & Suites**: Parallel execution support via TestNG XML suites; annotations for data providers enable reusable, parameterized tests across endpoints. [web:13]
-- **ExtentReports Integration**: HTML dashboards with pass/fail logs, screenshots, and test categorization; listener auto-generates reports post-execution. [web:12]
-- Additional perks: Layered structure (Core/App/Test), Maven dependencies, logging, and CI-ready (Jenkins/GitHub Actions).
+ExtentReports: Auto-generated HTML dashboards with logs, trends, and categorization.
 
-## Quick Start
+Modular layers: Core utilities, app payloads/endpoints, test cases; Maven-based, CI-ready.
 
-1. Clone repo: `git clone https://github.com/shivamyvc/APIAutomation.git`
-2. Install: `mvn clean install`
-3. Run tests: `mvn test` or use `testng.xml` suites (e.g., `mvn test -Dsuitename=RegressionSuite`)
+Quick Start
+Clone: git clone https://github.com/shivamyvc/APIAutomation.git
 
-## Architecture
+Install: mvn clean install
 
-src/
-├── main/java/core/ # Utilities, API clients, payloads
-├── test/java/app/ # Endpoints, POJOs with Builder
-└── test/java/test/ # TestNG suites & cases
-
-text
-
-## Example Usage
-
-**POJO Builder**:
-```java
-UserRequest user = UserRequest.builder()
-    .name("John")
-    .email("john@example.com")
-    .build();
-TestNG Test:
-
-java
-@Test(dataProvider = "userData")
-public void createUserTest(UserRequest user) {
-    given().spec(requestSpec).body(user)
-        .when().post("/users")
-        .then().statusCode(201).spec(responseSpec);
-}
-
-
-text
-
-## Reports
-ExtentReports generated at ExtentReport/_report.html
-
-##  Contributing
-Fork, PR with test cases.
-
+Run: mvn test or mvn test -Dsuitename=RegressionSuite
