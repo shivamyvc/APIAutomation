@@ -45,10 +45,9 @@ public void createUserTest(UserRequest user) {
 
 text
 
-## Example Usage
-***Reports***
+## Reports
 ExtentReports generated at ExtentReport/_report.html
 
-```Contributing
-Fork, PR with test cases. Add features like Allure reports or Karate integration!
+##  Contributing
+Fork, PR with test cases.
 
