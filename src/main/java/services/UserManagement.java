@@ -2,6 +2,7 @@ package services;
 
 import io.restassured.response.Response;
 import service.base.ZBankBaseService;
+import utilities.Reporter.ExtentTestManager;
 
 public class UserManagement extends ZBankBaseService {
 
@@ -15,18 +16,21 @@ public class UserManagement extends ZBankBaseService {
 
 	public Response fetchUserProfile(String authToken) {
 		setToken(authToken);
+		ExtentTestManager.getTest().assignCategory("Profile");
 		return sendGetRequest(PROFILE_ENDPONIT);
 
 	}
 	
 	public Response updateProfileData(Object payLoad,String authToken) {
 		setToken(authToken);
+		ExtentTestManager.getTest().assignCategory("Profile");
 		return sendPatchRequest(payLoad,PROFILE_ENDPONIT);
 	}
 	
 	
 	public Response updateProfile(Object payLoad,String authToken) {
 		setToken(authToken);
+		ExtentTestManager.getTest().assignCategory("Profile");
 		return sendPutRequest(payLoad,PROFILE_ENDPONIT);
 	}
 

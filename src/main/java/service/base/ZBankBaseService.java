@@ -1,6 +1,8 @@
 package service.base;
 
 import io.restassured.specification.RequestSpecification;
+import utilities.Reporter.ExtentTestManager;
+
 import static io.restassured.RestAssured.*;
 
 import java.net.URI;
@@ -12,7 +14,7 @@ import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-public class ZBankBaseService {
+public abstract class ZBankBaseService {
 
 	protected final static String BASE_URL = "https://swift.techwithjatin.com/";
 
@@ -31,18 +33,22 @@ public class ZBankBaseService {
 	}
 
 	protected Response sendPostRequest(Object payLoad, String endponit) {
+//		ExtentTestManager.getTest().assignCategory("POST");
 		return baseRequestSpecification.header("Content-Type", "application/json").body(payLoad).post(endponit);
 	}
 	
 	protected Response sendPatchRequest(Object payLoad, String endponit) {
+//		ExtentTestManager.getTest().assignCategory("PATCH");
 		return baseRequestSpecification.header("Content-Type", "application/json").body(payLoad).patch(endponit);
 	}
 	
 	protected Response sendPutRequest(Object payLoad, String endponit) {
+//		ExtentTestManager.getTest().assignCategory("PUT");
 		return baseRequestSpecification.header("Content-Type", "application/json").body(payLoad).put(endponit);
 	}
 	
 	protected Response sendGetRequest(String endponit) {
+//		ExtentTestManager.getTest().assignCategory("GET");
 		return baseRequestSpecification.get(endponit);
 	}
 

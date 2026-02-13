@@ -16,7 +16,7 @@ import services.UserManagement;
 import utilities.Reporter.ExtentTestManager;
 
 @Listeners({utilities.Listeners.Listener.class})
-public class BaseTest {
+public abstract class BaseTest {
 	protected String userToken;
 
 	@BeforeSuite(alwaysRun = true)

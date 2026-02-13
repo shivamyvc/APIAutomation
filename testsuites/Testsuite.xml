@@ -6,6 +6,9 @@
             <class name="test.user.management.services.UpdateUserProfileTest" />
             <class name="test.accounts.services.AccountsTest" />
             <class name="test.auth.services.LoginTest" />
+            <class name="test.transaction.services.DepositeTest" />
+            <class name="test.transaction.services.HistoryTest" />
+           
         </classes>
     </test>
 </suite>
