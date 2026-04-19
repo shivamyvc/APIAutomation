@@ -34,7 +34,7 @@ public class ExtentReportManager {
 	private static String getReportPath() {
 
 		String folder = new SimpleDateFormat("dd-MMM-yyyy").format(new Date());
-		String subfolder =       ""     ;//new SimpleDateFormat("hh-mm-ss").format(new Date());
+		String subfolder = ""     ;//new SimpleDateFormat("hh-mm-ss").format(new Date());
 		return EXTENT_REPORT_FOLDER + "/Report.html";
 
 	}
