@@ -136,6 +136,19 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.6.1</version>
 				</plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version> <!-- Use a recent version -->
+            <configuration>
+                <suiteXmlFiles>
+                    <!-- This property will be dynamically replaced by the command line argument -->
+                    <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+        </plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>
